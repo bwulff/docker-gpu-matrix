@@ -1,5 +1,5 @@
 
-datawarehouse:
+gpu_dashboard:
   image: iais/gpu-dashboard:latest
   container_name: gpu_dashboard
   restart: always

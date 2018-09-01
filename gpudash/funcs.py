@@ -1,6 +1,6 @@
 
 def get_gpu_assigments(docker_client, num_gpus):
-    containers = docker_client.containers.list(all=True):
+    containers = docker_client.containers.list(all=True)
     assignments = {}
     for container in containers:
         assignments[container.short_id] = [0] * num_gpus
