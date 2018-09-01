@@ -14,6 +14,6 @@ EXPOSE 80
 ENV NUM_GPUS=1
 ENV BIND_IP=0.0.0.0
 ENV BIND_PORT=80
-ENV DOCKER_URL=/tmp/docker.sock
+ENV DOCKER_URL=unix://tmp/docker.sock
 
 CMD ["python", "/app/server.py"]
