@@ -1,0 +1,13 @@
+
+datawarehouse:
+  image: iais/gpu-dashboard:latest
+  container_name: gpu_dashboard
+  restart: always
+  ports:
+    - "8080:80"
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock:rw
+  environment:
+    - BIND_IP=0.0.0.0
+    - BIND_PORT=80
+    - NUM_GPUS=4
