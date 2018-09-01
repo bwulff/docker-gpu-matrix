@@ -21,4 +21,4 @@ logger = app.logger
 )
 def serve_gpu_assigments():
     containers, gpu_assigments = get_gpu_assigments(docker_client, num_gpus)
-    return render_template('gpu_matrix.html', containers=containers, assigments=gpu_assigments, num_gpus=num_gpus)
+    return render_template('gpu_matrix.html', containers=containers, assignments=gpu_assigments, num_gpus=num_gpus)

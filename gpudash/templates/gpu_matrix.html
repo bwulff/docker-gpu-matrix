@@ -19,7 +19,7 @@
           <th width="80px">Status</th>
           <th width="160px">Name</th>
           {% for i in range(num_gpus) %}
-            <th>GPU {{ i }}</th>
+            <th style="text-align:center;">GPU {{ i }}</th>
           {% endfor %}
         </tr>
       </thead>
@@ -37,9 +37,9 @@
             </td>
             <td>{{ c.name }}</td>
             {% for i in range(num_gpus) %}
-              <td>
+              <td align="center">
                 {% if assignments[c.short_id][i] == 1 %}
-                  <span class="label label-success">&nbsp;</span>
+                  <span class="label label-warning">X</span>
                 {% else %}
                   &nbsp;
                 {% endif %}
